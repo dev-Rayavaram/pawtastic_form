@@ -14,9 +14,8 @@ function App() {
               <h5>Pet details</h5>
               <h5>Confirm</h5>
           </div>
-          <div>
+          <div className='image'>
           <img src="./assets/images.jpg" style={{width:'70px' ,height:'70px'}} alt=''></img>
-
           </div>
         </div>
         <div className='form'>
