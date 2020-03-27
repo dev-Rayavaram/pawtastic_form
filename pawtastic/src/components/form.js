@@ -2,25 +2,7 @@ import React ,{Component} from 'react';
 
 
 export default class Form extends Component{
-  constructor(props){
-    super(props);
-    this.state={
-      value:''
-    }
-    this.handleSubmit = this.handleSubmit.bind(this);
-    this.handleChange=this.handleChange.bind(this);
-  }
-
-    handleChange(event){
-      this.setState({value: event.target.value});
-      console.log("event",event);
-      event.preventDefault();
-    }
-    handleSubmit(event){
-      alert(`name was submitted ${this.state.value}`);
-      event.preventDefault();
-
-    }
+ 
   render(){
     return(
         <div>
@@ -32,20 +14,20 @@ export default class Form extends Component{
             Name:
             </label>
 
-            <input id='name' value={this.state.value} type='text' onChange={this.handleChange}/>
+            <input id='name'  type='text' />
             <label>Upload Image</label>
 
             </div>
             <div className='row'>
-   
+
                     <label>
                     Brand:
                     </label>
-                    <input id='name' value={this.state.value} type='text' onChange={this.handleChange}/>
+                    <input id='name'  type='text' />
                     <label>
                     Birthday:
                     </label>
-                    <input id='name' value={this.state.value} type='text' onChange={this.handleChange}/>
+                    <input id='name'  type='text' />
 
   
             </div>
