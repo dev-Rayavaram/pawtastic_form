@@ -40,26 +40,38 @@ export default class Form extends Component{
                 </div> 
             </div>
             <div className='row'>
-   
-                    <label>
+              <div className='input'>
+              <label>
                     Gender:
                     </label>
-                    <button>Female</button><button>Male</button>
-                    <label>
+                    <div className='row'>
+                      <button>Female</button><button>Male</button>
+                    </div>
+ 
+              </div>
+              <div className='input'>
+              <label>
                     Spayed/Neutered:
                     </label>
-                    <input type='radio'></input>
-  
+                    <div className='row'>
+                      <button>Female</button><button>Male</button>
+                    </div>
+              </div>
             </div>
             <div className='row'>
-   
-            <label>
+          <div className='input'>
+          <label>
                 Weight:
             </label>
-            <button>0-20 lbs</button>
-            <button>20-50 lbs</button>
-            <button>50-100 lbs</button>
-            <button>100+ lbs</button>
+            <div className='row'>
+                <button>0-20 lbs</button>
+                <button>20-50 lbs</button>
+                <button>50-100 lbs</button>
+                <button>100+ lbs</button>
+
+            </div>
+ 
+          </div>
 
         </div>
 
