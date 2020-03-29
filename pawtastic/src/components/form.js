@@ -1,5 +1,5 @@
 import React ,{Component} from 'react';
-
+ 
 
 export default class Form extends Component{
  
@@ -9,27 +9,35 @@ export default class Form extends Component{
 
         <form onSubmit={this.handleSubmit}>
             <div className='row'>
-            <h2> Yay! We love dogs ,give us the basics about your pup</h2>
-            <label>
-            Name:
-            </label>
-
-            <input id='name'  type='text' />
-            <label>Upload Image</label>
-
+              <h2> Yay! We love dogs ,give us the basics about your pup</h2>
             </div>
             <div className='row'>
+              <div className='input'>
+              <label>
+                  Name:
+                </label>
 
-                    <label>
+                <input id='name'  type='text' />              
+                </div>
+
+            <label>Upload Image</label>
+            <i className='fa fa-upload'></i>
+            </div>
+            <div className='row'>
+                <div className='input'>
+                <label>
                     Brand:
                     </label>
                     <input id='name'  type='text' />
-                    <label>
+
+                </div>
+                <div className='input'>
+                <label>
                     Birthday:
                     </label>
                     <input id='name'  type='text' />
 
-  
+                </div> 
             </div>
             <div className='row'>
    
