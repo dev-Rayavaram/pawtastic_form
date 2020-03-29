@@ -8,7 +8,10 @@ function App() {
       <div className='card'>
         <div className='leftcard'>
           <div>
-              <h3>PAWTASTIC</h3>
+            <div className='paw'>
+                <i className="fa fa-paw"></i>         
+                <h3> PAWTASTIC</h3>
+            </div>
               <h5>Human Profile</h5>
               <h5>Pet basics</h5>
               <h5>Pet details</h5>
