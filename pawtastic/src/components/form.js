@@ -22,17 +22,18 @@ export default class Form extends Component{
   }
 
   handleNameChange(event){
-      this.setState({value: event.target.value});
+      this.setState({name: event.target.value});
       console.log("event",event);
       event.preventDefault();
     }
     handleBrandChange(event){
-      this.setState({value: event.target.value});
+      this.setState({brand: event.target.value});
       console.log("event",event);
       event.preventDefault();
     }
     handleBirthdayChange(event){
-      this.setState({value: event.target.value});
+      this.setState({birthday: event.target.value});
+
       console.log("event",event);
       event.preventDefault();
     }
@@ -42,12 +43,10 @@ export default class Form extends Component{
       event.preventDefault();
     }
     handleSpayOption(event){
-      this.setState({value: event.target.value});
       console.log("event",event);
       event.preventDefault();
     }
     handleWeightChange(event){
-      this.setState({value: event.target.value});
       console.log("event",event);
       event.preventDefault();
     }
@@ -66,7 +65,7 @@ export default class Form extends Component{
                   Name:
                 </label>
 
-                <input id='name' value={this.state.value}  type='text'/>              
+                <input id='name' value={this.state.name}  type='text' onChange={this.handleNameChange}/>              
                 </div>
 
             <label>Upload Image</label>
@@ -77,14 +76,14 @@ export default class Form extends Component{
                 <label>
                     Brand:
                     </label>
-                    <input id='brand'  type='text' />
+                    <input id='brand' value={this.state.brand}  type='text'  onChange={this.handleBrandChange}/>
 
                 </div>
                 <div className='input'>
                 <label>
                     Birthday:
                     </label>
-                    <input id='birthday'  type='text' />
+                    <input id='birthday'  value={this.state.birthday} type='text'  onChange={this.handleBirthdayChange}/>
 
                 </div> 
             </div>
