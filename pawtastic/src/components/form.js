@@ -54,7 +54,18 @@ export default class Form extends Component{
       //console.log("event",event);
       event.preventDefault();
     }
-   
+    onBackClick(event){
+      let inputValue= event.target.value;
+      alert(inputValue+" clicked");
+      console.log("event",inputValue);
+      event.preventDefault();
+    }
+    onNextClick(event){
+      let inputValue= event.target.value;
+      alert(inputValue +` clicked`);
+      console.log("event",inputValue);
+      event.preventDefault();
+    }
   render(){
     return(
         <div>
@@ -138,7 +149,7 @@ export default class Form extends Component{
 
         </div>
         <div className='row2'>
-           <div className='button1'><button id='back'>Back</button></div> <div className='bitton2'><button id='next'>Next</button></div>
+           <div className='button1'><button id='next' value='Next' onClick={this.onNextClick}>Next</button></div> <div className='bitton2'><button id='back' value='Back' onClick={this.onBackClick}>Back</button></div>
         </div>
       </form>
         </div>
