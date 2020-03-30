@@ -4,15 +4,19 @@ html,body{
   display: flex;
   justify-content: center;
   align-items: center;
-  
+  margin: 0px;
+  border: 0px;
+  padding: 0px;
+  height:100%;
+  width:100%; 
 }
 .paw{
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  width:30px;
-  height:30px;
+  width:3%;
+  height:3%;
 }
 .fa{
   padding: 0px;
@@ -32,23 +36,31 @@ html,body{
   display: flex;
   justify-content: center;
   align-items: center;
-  margin:40px;
+  margin:2%;
   background-color: gray;
-  height:600px;
-  width:800px;
+  height:100%;
+  width:90%;
+}
+.page{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin:3%;
+  height:100%;
+  width:90%; 
 }
 .card{
   display: grid;
   grid-template-columns: 2fr 3fr;
   
-  width: 80%;
-  height:80%;
+  width: 100%;
+  height:100%;
 }
 .leftcard{
   display: flex;
   flex-direction: column;
   background-color: black;
-  padding: 50px;
+  padding: 2%;
   justify-content: top;
   align-items: center;
   color:white;
@@ -64,18 +76,34 @@ html,body{
 .input{
   display: flex;
   flex-direction: column;
-  padding:10px;
+  padding:2%;
 }
 .row{
   width:100%;
   display: flex;
+  margin-left: 10%;
+
   flex-direction: row;
   justify-content:left;
   align-items: baseline;
 }
+.row-inner{
+  margin-left: 0px;
+}
+.row2{
+  width:100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  justify-content:left;
+  align-items: baseline;
+  position: relative;
+  top: 60%;
+}
 .image{
   background-image: url('./assets/images.jpg');
-  width:100%;
+  width:70%;
   height:100%;
 
 }
@@ -83,7 +111,20 @@ html,body{
 button{
   width:55px;
   height:30px;
+  border-radius: 15%;
 }
 input{
-  width: 80px;
+  width: 80%;
+}
+.button1{
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+  left:78%;
+}
+.button2{
+  display: flex;
+  justify-content: flex-start;
+  position: absolute;
+  left:82%;
 }
