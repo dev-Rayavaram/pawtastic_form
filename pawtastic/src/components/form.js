@@ -44,8 +44,12 @@ export default class Form extends Component{
               <label>
                     Gender:
                     </label>
-                    <div className='row'>
-                      <button>Female</button><button>Male</button>
+                    <div className='row  row-inner'>
+                        <input type="checkbox" id="toggle2" className="checkbox2" />
+                        <label for="toggle2" className="switch2">
+                        <span className="switch2-inner" />
+                        <span className="switch2-switch" />
+                        </label>
                     </div>
  
               </div>
@@ -53,8 +57,12 @@ export default class Form extends Component{
               <label>
                     Spayed/Neutered:
                     </label>
-                    <div className='row'>
-                      <button>Female</button><button>Male</button>
+                    <div className='row  row-inner'>
+                    <input type="checkbox" id="toggle" class="checkbox" />
+                    <label for="toggle" className="switch">
+                    <span className="switch-inner" />
+                    <span className="switch-switch" />
+                    </label>
                     </div>
               </div>
             </div>
@@ -63,7 +71,7 @@ export default class Form extends Component{
           <label>
                 Weight:
             </label>
-            <div className='row'>
+            <div className='row row-inner'>
                 <button>0-20 lbs</button>
                 <button>20-50 lbs</button>
                 <button>50-100 lbs</button>
@@ -74,7 +82,9 @@ export default class Form extends Component{
           </div>
 
         </div>
-
+        <div className='row2'>
+           <div className='button1'><button>Back</button></div> <div className='bitton2'><button>Next</button></div>
+        </div>
       </form>
         </div>
       
