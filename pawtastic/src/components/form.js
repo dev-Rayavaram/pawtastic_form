@@ -8,7 +8,7 @@ export default class Form extends Component{
       name:'',
       brand:'',
       birthday:'',
-      gender:'',
+      is_Female: true,
       optionSpayed:'',
       weight:''
     }
@@ -38,7 +38,9 @@ export default class Form extends Component{
       event.preventDefault();
     }
     handleGenderOption(event){
-      this.setState({value: event.target.value});
+      this.setState({is_Female: !this.state.is_Female});
+      console.log(this.state.is_Female);  
+      console.log("inside handleGenderOption");
       console.log("event",event);
       event.preventDefault();
     }
@@ -93,8 +95,8 @@ export default class Form extends Component{
                     Gender:
                     </label>
                     <div className='row  row-inner'>
-                        <input type="checkbox" id="genderToggle" className="checkbox2" />
-                        <label for="genderToggle" className="switch2">
+                        <input type="checkbox" id="genderToggle" className="checkbox2" onChange={this.handleGenderOption} checked={this.state.is_Female}/>
+                        <label forhtml="genderToggle" className="switch2">
                         <span className="switch2-inner" />
                         <span className="switch2-switch" />
                         </label>
@@ -106,8 +108,8 @@ export default class Form extends Component{
                     Spayed/Neutered:
                     </label>
                     <div className='row  row-inner'>
-                    <input type="checkbox" id="toggle" class="checkbox" />
-                    <label for="toggle" className="switch">
+                    <input type="checkbox" id="toggle" className="checkbox" />
+                    <label forhtml="toggle" className="switch">
                     <span className="switch-inner" />
                     <span className="switch-switch" />
                     </label>
