@@ -5,9 +5,10 @@ import './App.css';
 function App() {
   return (
     <div className="App">
+      <div className='page'>
       <div className='card'>
         <div className='leftcard'>
-          <div>
+          <div style={{margin:0,border:0,padding:0}}>
             <div className='paw'>
                 <i className="fa fa-paw"></i>         
                 <h3> PAWTASTIC</h3>
@@ -24,6 +25,8 @@ function App() {
         <div className='form'>
           <Form/>
         </div>
+      </div>
+    
       </div>
     </div>
   );
