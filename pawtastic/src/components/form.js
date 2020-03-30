@@ -10,7 +10,7 @@ export default class Form extends Component{
       birthday:'',
       is_Female: true,
       optionSpayed:'',
-      weight:''
+      weight:'1'
     }
     this.handleNameChange=this.handleNameChange.bind(this);
     this.handleBrandChange=this.handleBrandChange.bind(this);
@@ -23,33 +23,35 @@ export default class Form extends Component{
 
   handleNameChange(event){
       this.setState({name: event.target.value});
-      console.log("event",event);
+    //  console.log("event",event);
       event.preventDefault();
     }
     handleBrandChange(event){
       this.setState({brand: event.target.value});
-      console.log("event",event);
+    //  console.log("event",event);
       event.preventDefault();
     }
     handleBirthdayChange(event){
       this.setState({birthday: event.target.value});
 
-      console.log("event",event);
+     // console.log("event",event);
       event.preventDefault();
     }
     handleGenderOption(event){
       this.setState({is_Female: !this.state.is_Female});
       console.log(this.state.is_Female);  
       console.log("inside handleGenderOption");
-      console.log("event",event);
+  //    console.log("event",event);
       event.preventDefault();
     }
     handleSpayOption(event){
-      console.log("event",event);
+    //  console.log("event",event);
       event.preventDefault();
     }
     handleWeightChange(event){
-      console.log("event",event);
+      this.setState({weight: event.target.value});
+      console.log(this.state.weight);
+      //console.log("event",event);
       event.preventDefault();
     }
    
@@ -76,7 +78,7 @@ export default class Form extends Component{
             <div className='row'>
                 <div className='input'>
                 <label>
-                    Brand:
+                    Breed:
                     </label>
                     <input id='brand' value={this.state.brand}  type='text'  onChange={this.handleBrandChange}/>
 
@@ -122,10 +124,13 @@ export default class Form extends Component{
                 Weight:
             </label>
             <div className='row row-inner'>
-                <button>0-20 lbs</button>
-                <button>20-50 lbs</button>
-                <button>50-100 lbs</button>
-                <button>100+ lbs</button>
+            <select value={this.state.weight} onChange={this.handleWeightChange}>
+                <option selected value='1'>0-20 lbs</option>
+                <option value='2'>20-50 lbs</option>
+                <option value='3'>50-100 lbs</option>
+                <option value='4'>100+ lbs</option>
+              </select>
+
 
             </div>
  
