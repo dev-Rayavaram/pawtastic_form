@@ -15,8 +15,7 @@ export default class Form extends Component{
     this.handleNameChange=this.handleNameChange.bind(this);
     this.handleBrandChange=this.handleBrandChange.bind(this);
     this.handleBirthdayChange=this.handleBirthdayChange.bind(this);
-    this.handleGenderOption=this.handleGenderOption.bind(this);
-    this.handleSpayOption=this.handleSpayOption.bind(this);
+    
     this.handleWeightChange=this.handleWeightChange.bind(this);
 
   }
@@ -36,19 +35,7 @@ export default class Form extends Component{
 
      // console.log("event",event);
       event.preventDefault();
-    }
-    handleGenderOption(event){
-      this.setState({is_Female: !this.state.is_Female});
-      console.log(this.state.is_Female);  
-      console.log("inside handleGenderOption");
-  //    console.log("event",event);
-      event.preventDefault();
-    }
-    handleSpayOption(event){
-      this.setState({optionSpayed: !this.state.optionSpayed});
-      console.log("event",this.state.optionSpayed);
-      event.preventDefault();
-    }
+    }  
     handleWeightChange(event){
       this.setState({weight: event.target.value});
       console.log(this.state.weight);
@@ -109,7 +96,7 @@ export default class Form extends Component{
                     Gender:
                     </label>
                     <div className='row  row-inner'>
-                        <input type="checkbox" id="genderToggle" className="checkbox2" onChange={this.handleGenderOption} checked={this.state.is_Female}/>
+                        <input type="checkbox" id="genderToggle" className="checkbox2" onChange={()=>{this.setState({is_Female: !this.state.is_Female})}} checked={this.state.is_Female}/>
                         <label forhtml="genderToggle" className="switch2">
                         <span className="switch2-inner" />
                         <span className="switch2-switch" />
@@ -122,7 +109,7 @@ export default class Form extends Component{
                     Spayed/Neutered:
                     </label>
                     <div className='row  row-inner'>
-                    <input type="checkbox" id="toggle" className="checkbox" onChange={this.handleSpayOption} checked={this.state.optionSpayed}/>
+                    <input type="checkbox" id="toggle" className="checkbox" onChange={()=>{this.setState({optionSpayed: !this.state.optionSpayed})}} checked={this.state.optionSpayed}/>
                     <label forhtml="toggle" className="switch">
                     <span className="switch-inner" />
                     <span className="switch-switch" />
@@ -137,7 +124,7 @@ export default class Form extends Component{
             </label>
             <div className='row row-inner'>
             <select value={this.state.weight} onChange={this.handleWeightChange}>
-                <option selected value='1'>0-20 lbs</option>
+                <option  value='1'>0-20 lbs</option>
                 <option value='2'>20-50 lbs</option>
                 <option value='3'>50-100 lbs</option>
                 <option value='4'>100+ lbs</option>
