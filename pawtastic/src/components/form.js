@@ -14,9 +14,10 @@ export default class Form extends Component{
     }
     this.handleNameChange=this.handleNameChange.bind(this);
     this.handleBrandChange=this.handleBrandChange.bind(this);
-    this.handleBirthdayChange=this.handleBirthdayChange.bind(this);
-    
+    this.handleBirthdayChange=this.handleBirthdayChange.bind(this);  
     this.handleWeightChange=this.handleWeightChange.bind(this);
+    this.onBackClick=this.onBackClick.bind(this);
+    this.onNextClick=this.onNextClick.bind(this);
 
   }
 
@@ -45,13 +46,13 @@ export default class Form extends Component{
     onBackClick(event){
       let inputValue= event.target.value;
       alert(inputValue+" clicked");
-      console.log("event",inputValue);
+      console.log(this.state);
       event.preventDefault();
     }
     onNextClick(event){
       let inputValue= event.target.value;
       alert(inputValue +` clicked`);
-      console.log("event",inputValue);
+      console.log(this.state);
       event.preventDefault();
     }
   render(){
