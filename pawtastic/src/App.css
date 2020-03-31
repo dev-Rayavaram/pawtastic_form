@@ -168,7 +168,7 @@ html,body{
 
 }
 .checkbox2:checked + .switch2::after {
-  left : 54px; 
+  left : 55px; 
 }
 .checkbox2:checked + .switch2 {
   background-color:  lavenderblush;
@@ -194,7 +194,7 @@ button{
   color: white;
 }
 input{
-  width: 80%;
+  width: 100%;
 }
 .button1{
   display: flex;
