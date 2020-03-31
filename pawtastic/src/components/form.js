@@ -98,7 +98,7 @@ export default class Form extends Component{
                 <label>
                     Birthday:
                     </label>
-                    <input id='birthday'  value={this.state.birthday} type='text'  onChange={this.handleBirthdayChange}/>
+                    <input id='birthday'  value={this.state.birthday} type='date'  onChange={this.handleBirthdayChange}/>
 
                 </div> 
             </div>
